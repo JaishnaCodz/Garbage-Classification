@@ -45,7 +45,8 @@ A deep learning project to classify waste images into 6 categories using transfe
 
 ### 📸 Sample Output:
 
-![Sample Prediction](![image](https://github.com/user-attachments/assets/3e34ac66-b666-46eb-bd68-b0ece88c88b9)
+![Sample Prediction](![sample garbage op](https://github.com/user-attachments/assets/739fa4c0-1353-4499-9c6c-761744951ece)
+)
 ) <!-- Replace with your image -->
 
 ---
