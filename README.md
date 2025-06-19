@@ -41,7 +41,7 @@ A deep learning project to classify waste images into 6 categories using transfe
 ## 🌐 Web App
 
 ✅ Try the model live:  
-👉 [Gradio Demo on Hugging Face Spaces](https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE)
+👉 [Gradio Demo on Hugging Face Spaces](https://huggingface.co/spaces/JaishnaCodz/Garbage-Classification)
 
 ### 📸 Sample Output:
 
