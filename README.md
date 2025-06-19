@@ -1,41 +1,58 @@
-# 🗑️ Garbage Classification using EfficientNet and Gradio
+# 🗑️ Garbage Classification Using EfficientNet and Gradio
 
-A deep learning project to classify waste images into 6 categories:  
-**cardboard, glass, metal, paper, plastic, trash** using **EfficientNetV2B2** and deployed with **Gradio**.
+A deep learning project to classify waste images into 6 categories using transfer learning with EfficientNetV2B2, deployed as a web app using Gradio and Hugging Face Spaces.
+
+![Banner](![garbage banner pic](https://github.com/user-attachments/assets/490419fb-26d6-49f5-96ba-f1cdc32f3cb2)
+) <!-- Replace this with your own image later -->
 
 ---
 
 ## 📂 Dataset
-Used the [TrashType Image Dataset](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification) from Kaggle.  
-It contains 6 classes of garbage images.
+- **Source:** [TrashType Garbage Dataset (Kaggle)](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification)
+- **Classes:** `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash`
+- **Preprocessing:** Resized to 124x124, class-balanced using `class_weight`
 
 ---
 
-## 🧠 Model
-- Base model: `EfficientNetV2B2` (transfer learning from ImageNet)
-- Image size: 124x124
-- Preprocessing: `Rescaling(1./255)`
-- Fine-tuned using `Adam` with class weights
-- Final accuracy: >90% on validation set
+## 🧠 Model Architecture
+- **Base Model:** EfficientNetV2B2 (pretrained on ImageNet)
+- **Layers Added:**
+  - Rescaling
+  - GlobalAveragePooling2D
+  - Dense (128 neurons, ReLU)
+  - Dense (6 outputs, Softmax)
+
+- **Fine-Tuning:** Base model layers unfrozen and retrained with low learning rate
+- **Optimizer:** Adam (`lr = 1e-5`)
+- **Loss:** Sparse Categorical Crossentropy
 
 ---
 
-## 🌐 Web App (Gradio)
-Live demo: [Try it on Hugging Face Spaces](https://huggingface.co/spaces/JaishnaCodz/Garbage-Classification)
+## 🔬 Model Evaluation
 
-Upload any trash image and see the predicted category with top confidence scores.
-
----
-
-## 📦 Tech Stack
-- Python, TensorFlow, NumPy
-- Transfer Learning (EfficientNet)
-- Gradio (Web UI)
-- Google Colab, Hugging Face Spaces
+| Metric      | Value       |
+|-------------|-------------|
+| Accuracy    | ~92%        |
+| Validation  | Balanced across all 6 classes |
+| Tools Used  | Confusion matrix, classification report |
 
 ---
 
-## 🚀 How to Run Locally
+## 🌐 Web App
+
+✅ Try the model live:  
+👉 [Gradio Demo on Hugging Face Spaces](https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE)
+
+### 📸 Sample Output:
+
+![Sample Prediction](![image](https://github.com/user-attachments/assets/3e34ac66-b666-46eb-bd68-b0ece88c88b9)
+) <!-- Replace with your image -->
+
+---
+
+## 🚀 Getting Started Locally
+
+### Requirements
+
 ```bash
-pip install gradio tensorflow
-python app.py
+pip install gradio tensorflow numpy pillow
