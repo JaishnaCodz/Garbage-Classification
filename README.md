@@ -2,8 +2,8 @@
 
 A deep learning project to classify waste images into 6 categories using transfer learning with EfficientNetV2B2, deployed as a web app using Gradio and Hugging Face Spaces.
 
-![Banner](![garbage banner pic](https://github.com/user-attachments/assets/490419fb-26d6-49f5-96ba-f1cdc32f3cb2)
-) <!-- Replace this with your own image later -->
+(![garbage banner pic](https://github.com/user-attachments/assets/490419fb-26d6-49f5-96ba-f1cdc32f3cb2)
+
 
 ---
 
@@ -45,9 +45,8 @@ A deep learning project to classify waste images into 6 categories using transfe
 
 ### 📸 Sample Output:
 
-![Sample Prediction](![sample garbage op](https://github.com/user-attachments/assets/739fa4c0-1353-4499-9c6c-761744951ece)
-)
-) <!-- Replace with your image -->
+(![sample garbage op](https://github.com/user-attachments/assets/739fa4c0-1353-4499-9c6c-761744951ece)
+
 
 ---
 
